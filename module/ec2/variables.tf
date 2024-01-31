@@ -11,7 +11,8 @@ variable "instance_type" {
 }
 
 variable "tag" {
-  type        = string
+  type        = map(string)
+  default     = {}
 }
 
 variable "name" {
