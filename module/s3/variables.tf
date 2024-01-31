@@ -1,13 +1,17 @@
 variable "create_bucket" {
   description = "Controls if S3 bucket should be created"
   type        = bool
-  default     = true
 }
 
 variable "bucket" {
   description = "(Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name."
   type        = string
-  default     = null
+}
+
+variable "versioning" {
+  description = "Map containing versioning configuration."
+  type        = map(string)
+  default     = {}
 }
 
 variable "tags" {
