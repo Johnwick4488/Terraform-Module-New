@@ -1,7 +1,8 @@
 module "s3_bucket" {
   source = "./module/s3/"
 
-  create_bucket = "santosh-445588"
+  create_bucket = true
+  bucket = "santosh-445588"
   acl    = "private"
 
   control_object_ownership = true
