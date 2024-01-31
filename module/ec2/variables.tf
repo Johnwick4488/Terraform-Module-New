@@ -4,7 +4,6 @@ variable "region" {
 
 variable "ami" {
   type        = string
-  default     = "ami-0a3c3a20c09d6f377"
 }
 
 variable "instance_type" {
@@ -13,5 +12,20 @@ variable "instance_type" {
 
 variable "tag" {
   type        = string
-  default     = "My-new-instance"
+}
+
+variable "name" {
+  type        = string
+}
+
+variable "key_name" {
+  type        = string
+}
+
+variable "subnet_id" {
+  type        = string
+}
+
+variable "vpc_security_group_ids" {
+  type        = list(string)
 }
