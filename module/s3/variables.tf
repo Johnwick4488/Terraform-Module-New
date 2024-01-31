@@ -8,6 +8,12 @@ variable "bucket" {
   type        = string
 }
 
+variable "acl" {
+  description = "(Optional) The canned ACL to apply. Conflicts with `grant`"
+  type        = string
+  default     = null
+}
+
 variable "versioning" {
   description = "Map containing versioning configuration."
   type        = map(string)
