@@ -1,10 +1,8 @@
 resource "aws_s3_bucket" "this" {
-  count = local.create_bucket ? 1 : 0
-
-  bucket        = var.bucket
-  bucket_prefix = var.bucket_prefix
-
-  force_destroy       = var.force_destroy
-  object_lock_enabled = var.object_lock_enabled
-  tags                = var.tags
+  bucket                      = var.bucket
+  acl                         = var.acl
+  control_object_ownership    = var.control_object_ownership
+  object_ownership            = var.object_ownership
+  versioning                  = var.versioning
+  tags                        = var.tags
 }
